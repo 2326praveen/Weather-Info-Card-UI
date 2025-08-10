@@ -1,0 +1,98 @@
+/* --- CSS Variables for easy theme management --- */
+:root {
+    --primary-font: 'Poppins', sans-serif;
+    --card-bg-color: rgba(255, 255, 255, 0.75); 
+    --text-color-primary: #111;
+    --text-color-secondary: #333;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* --- Basic Reset & Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Body element is now the main layout controller --- */
+body {
+    font-family: var(--primary-font);
+    color: var(--text-color-primary);
+    background-image: url("https://t4.ftcdn.net/jpg/06/41/91/85/360_F_641918542_bL3O5qWqKmaVrxM12Qa1pp1owFvKKP3k.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    
+    /* --- Key alignment properties --- */
+    display: flex;
+    justify-content: center; /* Centers the grid horizontally */
+    align-items: center;    /* Centers the grid vertically */
+    padding: 2rem; /* Adds space around the grid on small screens */
+}
+
+/* --- CSS Grid Layout for Cards --- */
+.weather-grid-container {
+    display: grid;
+    /* This creates a responsive grid that wraps automatically */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem; /* Space between the cards */
+    width: 100%;
+    max-width: 1100px; /* Sets a max width for the entire grid */
+}
+
+/* --- Weather Card Styling --- */
+.weather-card {
+    background: var(--card-bg-color);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 var(--shadow-color);
+    text-align: center;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* The flex property from the previous step is no longer needed */
+}
+
+/* --- Interactive Hover Effect --- */
+.weather-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 40px 0 var(--shadow-color);
+}
+
+/* --- Element Styling within the Card --- */
+.location {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.weather-icon img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+}
+
+.temperature {
+    font-size: 4rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--text-color-secondary);
+    text-transform: capitalize;
+}
+
+/* Media query for smaller card padding */
+@media (max-width: 480px) {
+    .weather-card {
+        padding: 2rem;
+    }
+}
