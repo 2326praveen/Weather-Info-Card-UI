@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Main Page Header -->
+    <header class="page-header">
+        <h1>
+            <img src="https://cdn-icons-png.flaticon.com/512/1850/1850730.png" alt="Cloud icon" class="header-icon">
+            Weather Dashboard
+        </h1>
+        <p>Stay updated with beautiful, real-time weather information. Clean design meets functionality.</p>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Sub-header for the cards section -->
+        <section class="sub-header">
+            <h2>Current Weather Conditions</h2>
+            <p>Check weather updates for different cities around the world</p>
+        </section>
+
+        <!-- Grid Container for the Weather Cards -->
+        <div class="weather-grid-container">
+            
+            <!-- New York Card -->
+            <div class="weather-card card-ny">
+                <div class="card-header">
+                    <span class="location">Bengaluru</span>
+                </div>
+                <div class="card-body">
+                    <p class="temperature">26&deg;</p>
+                    <img src="https://cdn-icons-png.flaticon.com/512/1850/1850730.png" alt="Sunny icon" class="weather-icon">
+                </div>
+                <p class="condition">Partly Sunny</p>
+                <div class="card-footer">
+                    <span><img src="https://cdn-icons-png.flaticon.com/512/9342/9342439.png" class="footer-icon"> 72% Humidity</span>
+                    <span><img src="https://cdn-icons-png.flaticon.com/512/54/54298.png" class="footer-icon"> 4 mph</span>
+                </div>
+            </div>
+
+            <!-- London Card -->
+            <div class="weather-card card-london">
+                <div class="card-header">
+                    <span class="location">Hyderabad</span>
+                </div>
+                <div class="card-body">
+                    <p class="temperature">33&deg;</p>
+                    <img src="https://uxwing.com/wp-content/themes/uxwing/download/weather/day-sunny-color-icon.png" alt="Cloudy icon" class="weather-icon">
+                </div>
+                <p class="condition">Mostly Sunny</p>
+                <div class="card-footer">
+                    <span><img src="https://cdn-icons-png.flaticon.com/512/9342/9342439.png" class="footer-icon"> 91% Humidity</span>
+                    <span><img src="https://cdn-icons-png.flaticon.com/512/54/54298.png" class="footer-icon"> 12 mph</span>
+                </div>
+            </div>
+
+            <!-- Seattle Card -->
+            <div class="weather-card card-seattle">
+                <div class="card-header">
+                    <span class="location">Mumbai</span>
+                </div>
+                <div class="card-body">
+                    <p class="temperature">25&deg;</p>
+                    <img src="https://cdn-icons-png.flaticon.com/512/6408/6408892.png" alt="Rain icon" class="weather-icon">
+                </div>
+                <p class="condition">Light Rain</p>
+                <div class="card-footer">
+                    <span><img src="https://cdn-icons-png.flaticon.com/512/9342/9342439.png" class="footer-icon"> 87% Humidity</span>
+                    <span><img src="https://cdn-icons-png.flaticon.com/512/54/54298.png" class="footer-icon"> 15 mph</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
